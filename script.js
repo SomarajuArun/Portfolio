@@ -131,3 +131,72 @@ function validateForm() {
 document.addEventListener('DOMContentLoaded', () => {
   typeEffect();
 });
+
+/* ================= PARTICLE BACKGROUND ================= */
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 90,
+      density: {
+        enable: true,
+        value_area: 900
+      }
+    },
+    color: {
+      value: ["#4f46e5", "#7c3aed", "#06b6d4", "#ffffff"]
+    },
+    shape: {
+      type: "circle"
+    },
+    opacity: {
+      value: 0.6,
+      random: true
+    },
+    size: {
+      value: 4,
+      random: true
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#67e8f9",
+      opacity: 0.25,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      random: true,
+      straight: false,
+      out_mode: "out",
+      bounce: false
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab"
+      },
+      onclick: {
+        enable: true,
+        mode: "push"
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 180,
+        line_linked: {
+          opacity: 0.8
+        }
+      },
+      push: {
+        particles_nb: 6
+      }
+    }
+  },
+  retina_detect: true
+});
