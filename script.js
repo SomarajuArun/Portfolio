@@ -4,7 +4,6 @@
 const titles = [
   "Computer Science Engineer",
   "Java Full Stack Developer",
-  "Web Developer",
   "WordPress Developer",
   "Software Developer"
 ];
