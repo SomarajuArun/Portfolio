@@ -6,8 +6,6 @@
   <title>Arun Somaraju | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="script.js"></script>
 <body>
 
   <!-- Header -->
@@ -93,7 +91,7 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form onsubmit="return validateForm()">
+    <form id="contact-form">
       <input type="text" id="name" placeholder="Your Name" required />
       <input type="email" id="email" placeholder="Your Email" required />
       <textarea id="message" placeholder="Your Message" required></textarea>
