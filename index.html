@@ -91,10 +91,16 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form action="https://formsubmit.co/arunsomaraju1@gmail.com" method="POST">
+    <form action="https://formsubmit.co/arunsomaraju1@gmail.com" method="POST" enctype="multipart/form-data">
       <input type="text" id="name" name="name" placeholder="Your Name" required />
       <input type="email" id="email" name="email" placeholder="Your Email" required />
       <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <input
+        type="file"
+        id="attachment"
+        name="attachment"
+        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip"
+       />
       <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
       <input type="hidden" name="_captcha" value="false" />
       <input
