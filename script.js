@@ -200,35 +200,35 @@ particlesJS("particles-js", {
   },
   retina_detect: true
 });
-emailjs.init({
-  publicKey: "3V9loDzSU_RhWTwOI",
-});
+// emailjs.init({
+//   publicKey: "3V9loDzSU_RhWTwOI",
+// });
 
-const contactForm = document.getElementById("contact-form");
-const formStatus = document.getElementById("form-status");
+// const contactForm = document.getElementById("contact-form");
+// const formStatus = document.getElementById("form-status");
 
-if (contactForm) {
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+// if (contactForm) {
+//   contactForm.addEventListener("submit", function (event) {
+//     event.preventDefault();
 
-    formStatus.textContent = "Sending message...";
+//     formStatus.textContent = "Sending message...";
 
-    emailjs
-      .sendForm(
-        "service_73s",
-        "template_3shsxpr",
-        contactForm
-      )
-      .then(
-        function () {
-          formStatus.textContent = "Message sent successfully!";
-          contactForm.reset();
-        },
-        function (error) {
-          console.error("EmailJS error:", error);
-          formStatus.textContent =
-            "Message failed. Please try again later.";
-        }
-      );
-  });
-}
+//     emailjs
+//       .sendForm(
+//         "service_73s",
+//         "template_3shsxpr",
+//         contactForm
+//       )
+//       .then(
+//         function () {
+//           formStatus.textContent = "Message sent successfully!";
+//           contactForm.reset();
+//         },
+//         function (error) {
+//           console.error("EmailJS error:", error);
+//           formStatus.textContent =
+//             "Message failed. Please try again later.";
+//         }
+//       );
+//   });
+// }
