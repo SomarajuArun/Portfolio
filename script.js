@@ -119,10 +119,10 @@ if (backToTop) {
 // ===============================
 // Contact Form Validation
 // ===============================
-// function validateForm() {
-//   alert("Thank you! Your message has been sent successfully.");
-//   return false;
-// }
+function validateForm() {
+  alert("Thank you! Your message has been sent successfully.");
+  return false;
+}
 
 // ===============================
 // Start Typing Effect
