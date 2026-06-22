@@ -117,11 +117,53 @@ if (backToTop) {
 }
 
 // ===============================
-// Contact Form Validation
+// Contact Form Submission
 // ===============================
-function validateForm() {
-  alert("Thank you! Your message has been sent successfully.");
-  return false;
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    formStatus.textContent = 'Sending message...';
+    formStatus.classList.remove('error');
+    formStatus.classList.remove('success');
+
+    const formData = new FormData(contactForm);
+    const actionUrl = 'https://formsubmit.co/ajax/arunsomaraju1@gmail.com';
+
+    fetch(actionUrl, {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(() => {
+        formStatus.textContent = 'Message sent successfully!';
+        formStatus.classList.add('success');
+        contactForm.reset();
+      })
+      .catch(error => {
+        console.error('Form submit error:', error);
+        formStatus.textContent = 'Message failed. Please try again later.';
+        formStatus.classList.add('error');
+      })
+      .finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      });
+  });
 }
 
 // ===============================
