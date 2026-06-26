@@ -138,10 +138,10 @@ if (contactForm && formStatus) {
     const formData = new FormData(contactForm);
     const actionUrl = 'https://formsubmit.co/arunsomaraju1@gmail.com';
 
-    fetch(actionUrl, {
-      method: 'POST',
-      body: formData
-    })
+    // fetch(actionUrl, {
+    //   method: 'POST',
+    //   body: formData
+    // })
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
