@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Arun Somaraju</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#f8fbff;
+            overflow:hidden;
+            position:relative;
+        }
+
+        body::before{
+            content:"";
+            position:absolute;
+            width:500px;
+            height:500px;
+            background:linear-gradient(135deg,#00d4ff,#2563eb);
+            filter:blur(180px);
+            opacity:.18;
+            top:-120px;
+            left:-120px;
+        }
+
+        body::after{
+            content:"";
+            position:absolute;
+            width:450px;
+            height:450px;
+            background:#4facfe;
+            filter:blur(180px);
+            opacity:.15;
+            bottom:-120px;
+            right:-120px;
+        }
+
+        .card{
+            position:relative;
+            width:90%;
+            max-width:650px;
+            background:#fff;
+            padding:60px 45px;
+            border-radius:25px;
+            text-align:center;
+            box-shadow:0 15px 45px rgba(0,0,0,.08);
+            border:1px solid rgba(37,99,235,.12);
+            z-index:10;
+        }
+
+        .checkmark{
+            width:100px;
+            height:100px;
+            margin:auto;
+            border-radius:50%;
+            background:linear-gradient(135deg,#2563eb,#00b4ff);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:#fff;
+            font-size:48px;
+            font-weight:bold;
+            box-shadow:0 10px 30px rgba(37,99,235,.35);
+        }
+
+        h1{
+            margin-top:30px;
+            color:#14213d;
+            font-size:42px;
+        }
+
+        p{
+            margin-top:20px;
+            font-size:18px;
+            line-height:1.8;
+            color:#5c6b82;
+        }
+
+        .highlight{
+            color:#2563eb;
+            font-weight:600;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:35px;
+            text-decoration:none;
+            background:linear-gradient(90deg,#2563eb,#00b4ff);
+            color:#fff;
+            padding:15px 38px;
+            border-radius:50px;
+            font-size:17px;
+            font-weight:600;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            transform:translateY(-3px);
+            box-shadow:0 10px 25px rgba(37,99,235,.35);
+        }
+
+        .small{
+            margin-top:25px;
+            font-size:15px;
+            color:#888;
+        }
+
+        @media(max-width:768px){
+
+            .card{
+                padding:45px 25px;
+            }
+
+            h1{
+                font-size:32px;
+            }
+
+            p{
+                font-size:16px;
+            }
+
+            .checkmark{
+                width:80px;
+                height:80px;
+                font-size:38px;
+            }
+
+        }
+
+    </style>
+
+    <script>
+        setTimeout(function(){
+            window.location.href="index.html";
+        },8000);
+    </script>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="checkmark">
+        ✓
+    </div>
+
+    <h1>Thank You!</h1>
+
+    <h3>Thank you for your interest.</h3>
+
+    <p class="message">
+        I sincerely appreciate you taking the time to visit my portfolio and reach out.
+    </p>
+
+    <p class="message">
+        Whether you're contacting me about a job opportunity, freelance project,
+        collaboration, internship, or simply to connect, your message is important to me.
+    </p>
+
+    <p class="message">
+        I have successfully received your message and will review it carefully.
+        I will get back to you as soon as possible.
+    </p>
+
+    <p class="closing">
+        Thank you once again for your time, interest, and the opportunity.
+        I look forward to connecting with you.
+    </p>
+
+    <h2 class="signature">
+        — Arun Somaraju
+    </h2>
+
+    <a href="index.html" class="btn">
+        Return to Portfolio
+    </a>
+
+    <p class="redirect">
+        You will be redirected automatically in <strong>8 seconds.</strong>
+    </p> 
+
+</div>
+
+</body>
+</html>
