@@ -894,101 +894,168 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
+
+/* Large Tablets */
 @media (max-width: 980px) {
-  header {
-    padding: 48px 20px 34px;
+
+  header{
+    padding:48px 20px 34px;
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 34px;
-    text-align: center;
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:36px;
+    text-align:center;
   }
 
-  .profile-media {
-    justify-self: center;
-    width: min(360px, 100%);
-    padding-bottom: 72px;
+  .profile-media{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0;
+    margin:0 auto 40px;
+    background:transparent;
   }
 
-  .profile {
-    margin: 0 auto;
+  .profile-media::before,
+  .profile-media::after{
+    display:none;
   }
 
-  .hero-actions {
-    justify-content: center;
+  .portrait-frame{
+    width:340px;
+    height:340px;
+    padding:0;
+    background:transparent;
+    border:none;
+    border-radius:50%;
+    box-shadow:none;
+    overflow:hidden;
+  }
+
+  .portrait-frame::before,
+  .portrait-frame::after{
+    display:none;
+  }
+
+  .portrait-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+  }
+
+  .profile{
+    margin:0 auto;
+  }
+
+  .availability-card{
+    margin:26px auto 0;
+  }
+
+  .hero-actions{
+    justify-content:center;
   }
 
   .timeline,
   .project-grid,
   .certificate-grid,
   .contact-layout,
-  .about-panel {
-    grid-template-columns: 1fr;
+  .about-panel{
+    grid-template-columns:1fr;
   }
 
-  nav {
-    width: min(760px, 100%);
-    flex-wrap: wrap;
-    border-radius: 28px;
+  nav{
+    width:min(760px,100%);
+    flex-wrap:wrap;
+    border-radius:28px;
   }
 
-  nav a {
-    flex: 1 1 30%;
+  nav a{
+    flex:1 1 30%;
   }
+
 }
 
-@media (max-width: 768px) {
-  header {
-    min-height: auto;
-    padding-top: 86px;
+/* Tablets */
+@media (max-width:768px){
+
+  header{
+    min-height:auto;
+    padding-top:90px;
   }
 
-  .linkedin-top {
-    top: 18px;
-    right: 20px;
+  .linkedin-top{
+    top:18px;
+    right:20px;
   }
 
-  .portrait-frame {
-    width: min(300px, 78vw);
-    border-radius: 30px;
+  .profile-media{
+    padding:0;
+    background:none;
   }
 
-  .portrait-frame img {
-    border-radius: 30px;
+  .profile-media::before,
+  .profile-media::after{
+    display:none;
   }
 
-  h1 {
-    font-size: clamp(2.55rem, 13vw, 4rem);
+  .portrait-frame{
+    width:300px;
+    height:300px;
+    background:none;
+    border:none;
+    box-shadow:none;
+    border-radius:50%;
+    overflow:hidden;
   }
 
-  .hero-metrics {
-    grid-template-columns: 1fr;
+  .portrait-frame::before,
+  .portrait-frame::after{
+    display:none;
   }
 
-  nav {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-    padding: 10px;
+  .portrait-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
   }
 
-  nav a {
-    min-width: 0;
-    padding: 13px 10px;
+  h1{
+    font-size:clamp(2.5rem,12vw,4rem);
   }
 
-  section {
-    padding: 64px 20px;
+  .hero-metrics{
+    grid-template-columns:1fr;
   }
 
-  .section-heading {
-    align-items: flex-start;
-    gap: 14px;
+  nav{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    padding:10px;
   }
 
-  .section-heading::after {
-    display: none;
+  nav a{
+    min-width:0;
+    padding:13px 10px;
+  }
+
+  section{
+    padding:64px 20px;
+  }
+
+  .section-heading{
+    align-items:flex-start;
+    gap:14px;
+  }
+
+  .section-heading::after{
+    display:none;
   }
 
   .about-panel,
@@ -997,98 +1064,101 @@ footer {
   .timeline-item,
   .certificate-grid article,
   .contact-copy,
-  form {
-    padding: 24px;
-    border-radius: 22px;
+  form{
+    padding:24px;
+    border-radius:22px;
   }
 
-  .experience-card {
-    grid-template-columns: 1fr;
+  .experience-card{
+    grid-template-columns:1fr;
   }
 
-  .experience-date {
-    white-space: normal;
+  .experience-date{
+    white-space:normal;
   }
+
 }
 
-@media (max-width: 520px) {
-  header {
-    padding-inline: 16px;
+/* Mobile */
+@media (max-width:520px){
+
+  header{
+    padding-inline:16px;
   }
 
-  .linkedin-top {
-    right: 16px;
-    padding-right: 12px;
-    font-size: 0.92rem;
+  .linkedin-top{
+    right:16px;
+    padding-right:12px;
+    font-size:.92rem;
   }
 
-  .profile-media {
-    width: min(310px, 100%);
-    padding: 12px 10px 70px;
+  .profile-media{
+    padding:0;
+    margin-bottom:34px;
+    background:none;
   }
 
-  .profile-media::before {
-    inset: 44px 24px 86px 30px;
-    border-radius: 28px;
+  .profile-media::before,
+  .profile-media::after{
+    display:none;
   }
 
-  .profile-media::after {
-    right: 12px;
-    top: 64px;
-    height: 150px;
+  .portrait-frame{
+    width:250px;
+    height:250px;
+    background:none;
+    border:none;
+    border-radius:50%;
+    box-shadow:none;
+    overflow:hidden;
   }
 
-  .portrait-frame {
-    width: min(268px, 78vw);
-    border-radius: 28px;
+  .portrait-frame::before,
+  .portrait-frame::after{
+    display:none;
   }
 
-  .portrait-frame::before {
-    inset: 24px -8px -12px 18px;
-    border-radius: 26px;
+  .portrait-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
   }
 
-  .portrait-frame::after {
-    left: -10px;
+  .availability-card{
+    width:min(320px,90vw);
+    margin:22px auto 0;
+    text-align:center;
   }
 
-  .portrait-frame img {
-    border-radius: 28px;
-  }
-
-  .availability-card {
-    max-width: calc(100vw - 48px);
-    white-space: normal;
-    text-align: center;
-  }
-
-  .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr;
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
   }
 
   .cta,
-  button {
-    width: 100%;
+  button{
+    width:100%;
   }
 
-  nav {
-    grid-template-columns: 1fr;
-    border-radius: 24px;
+  nav{
+    grid-template-columns:1fr;
+    border-radius:24px;
   }
 
-  .section-heading > span {
-    width: 48px;
-    height: 48px;
-    border-radius: 15px;
+  .section-heading>span{
+    width:48px;
+    height:48px;
+    border-radius:15px;
   }
 
-  section {
-    padding-inline: 16px;
+  section{
+    padding-inline:16px;
   }
 
   form input,
-  form textarea {
-    padding: 14px 16px;
+  form textarea{
+    padding:14px 16px;
   }
+
 }
