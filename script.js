@@ -124,7 +124,7 @@ const formStatus = document.getElementById('form-status');
 
 if (contactForm && formStatus) {
   contactForm.addEventListener('submit', event => {
-    event.preventDefault();
+    // event.preventDefault();
 
     const submitButton = contactForm.querySelector('button[type="submit"]');
     if (submitButton) {
@@ -136,7 +136,7 @@ if (contactForm && formStatus) {
     formStatus.classList.remove('success');
 
     const formData = new FormData(contactForm);
-    const actionUrl = 'https://formsubmit.co/ajax/arunsomaraju1@gmail.com';
+    const actionUrl = 'https://formsubmit.co/arunsomaraju1@gmail.com';
 
     fetch(actionUrl, {
       method: 'POST',
